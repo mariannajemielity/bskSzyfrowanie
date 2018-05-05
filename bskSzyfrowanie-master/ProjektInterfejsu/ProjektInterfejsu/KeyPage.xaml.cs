@@ -13,7 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using System.Text.RegularExpressions;
 
 namespace ProjektInterfejsu
 {
@@ -26,7 +26,34 @@ namespace ProjektInterfejsu
         {
             InitializeComponent();
         }
-
        
+
+        //sprawdzenie czy podane przez użytkownika hasło spełnia wymagania
+        private void passwordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            //przynajmniej 8 znaków
+            if (passwordBoxPassword1.Password.Length <8)
+                statusText.Text = "Hasło musi składać się z przynajmniej 8 znaków";
+            //przynajmniej 1 litera          
+            else if (!Regex.IsMatch(passwordBoxPassword1.Password, "[a-zA-Z]"))
+                statusText.Text = "Hasło musi zawierać przynajmiej jedeną literę";
+            //przynajmniej 1 cyfra
+            else if(!Regex.IsMatch(passwordBoxPassword1.Password, "[0-9]"))
+                statusText.Text = "Hasło musi zawierać przynajmiej jedną cyfrę";
+            //przynajmniej 1 znak specjalny
+            else if (Regex.IsMatch(passwordBoxPassword1.Password, "^[a-zA-Z0-9 ]*$"))
+                statusText.Text = "Hasło musi zawierać przynajmiej jeden znak specjalny";
+            else
+                statusText.Text = string.Empty;
+        }
+
+        //kliknięcie "Wygeneruj parę kluczy"
+        private void GenerateKeysButton_Click(object sender, RoutedEventArgs e)
+        {
+            //sprawdzenie czy podane hasła są identyczne
+            if (!passwordBoxPassword1.Password.Equals(passwordBoxPassword2.Password)) 
+                statusText.Text = "Podane hasła różnią się";
+
+        }
     }
 }

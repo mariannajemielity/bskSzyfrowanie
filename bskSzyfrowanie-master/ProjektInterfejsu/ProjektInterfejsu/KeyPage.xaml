@@ -23,20 +23,23 @@
                 </Grid.RowDefinitions>
                 
                 <Label Margin="0,10,0,10" Grid.Row="0" Grid.Column="0" Content="Nazwa użytkownika"/>
-                 <TextBox Margin="0,10,0,10" Grid.Column="1" Grid.Row="0" Name="userNameTextBox"/>
+                 <TextBox Margin="0,10,0,10" Grid.Column="1" Grid.Row="0" Name="textBoxUserName"/>
 
                 <Label Margin="0,10,0,10" Grid.Row="1" Grid.Column="0" Content="Hasło"/>
-                    <PasswordBox Margin="0,10,0,10" Grid.Column="1" Grid.Row="1" x:Name="passwor1Box"/>
-
+                    <PasswordBox PasswordChanged="passwordBox_PasswordChanged" Margin="0,10,0,10" Grid.Column="1" Grid.Row="1" x:Name="passwordBoxPassword1"/>
+                    
                     <Label Margin="0,10,0,10" Grid.Row="2" Grid.Column="0" Content="Powtórz hasło"/>
-                    <PasswordBox Margin="0,10,0,10" Grid.Column="1" Grid.Row="2" x:Name="password2Box"/>
+                    <PasswordBox Margin="0,10,0,10" Grid.Column="1" Grid.Row="2" x:Name="passwordBoxPassword2"/>
                 
             </Grid>
-            <Button Content="Wygeneruj parę kluczy" 
+
+                <TextBlock x:Name="statusText" Margin="10" HorizontalAlignment="Center" />
+
+                <Button Content="Wygeneruj parę kluczy" 
                     Height="30" 
                     HorizontalAlignment="Right"
                     Margin="0,10,50,0" 
-                    x:Name="generateKeysButton" 
+                    x:Name="generateKeysButton" Click="GenerateKeysButton_Click" 
              />
         </StackPanel>
         </Border>

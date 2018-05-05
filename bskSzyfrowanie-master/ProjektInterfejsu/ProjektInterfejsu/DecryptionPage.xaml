@@ -18,8 +18,8 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Label  Grid.Column="0" Content="Plik wejściowy" Margin="0,0,0,0"/>
-                    <TextBox Grid.Column="1" />
-                    <Button Grid.Column="2" Content="Wybierz plik" Margin="10,0,10,0"/>
+                    <TextBox Grid.Column="1" Name="textBoxDecFromFile"/>
+                    <Button Grid.Column="2" Content="Wybierz plik" Margin="10,0,10,0" Click="Button_Click"/>
                 </Grid>
                 <Grid Margin="0,10,0,10">
                     <Grid.ColumnDefinitions>
@@ -28,8 +28,8 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Label  Grid.Column="0" Content="Plik wyjściowy" Margin="0,0,0,0"/>
-                    <TextBox Grid.Column="1" />
-                    <Button Grid.Column="2" Content="Wybierz plik" Margin="10,0,10,0"/>
+                    <TextBox Grid.Column="1" Name="textBoxDecToFile"/>
+                    <Button Grid.Column="2" Content="Wybierz plik" Margin="10,0,10,0" Height="26" VerticalAlignment="Top" Click="Button_Click_1"/>
                 </Grid>
 
                 <StackPanel>

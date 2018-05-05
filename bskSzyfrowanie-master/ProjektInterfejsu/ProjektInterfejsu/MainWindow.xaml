@@ -15,7 +15,7 @@
                         <MenuItem Header="_Zamknij program" Click="Exit_Click" />
                     </MenuItem>
                     <MenuItem Header="_Pomoc">
-                        <MenuItem Header="_Informacje o programie"/>
+                        <MenuItem Header="_Informacje o programie" Click="MenuItem_Click"/>
                     </MenuItem>
                 </Menu>
             </DockPanel>

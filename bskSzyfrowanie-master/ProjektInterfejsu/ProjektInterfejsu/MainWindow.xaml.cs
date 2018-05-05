@@ -17,21 +17,17 @@ namespace ProjektInterfejsu
         private void EncryptionButton_Click(object sender, RoutedEventArgs e)
         {
             Main.Content = new EncryptionPage();
-            //EncryptionButton.Background = Brushes.AliceBlue;
             EncryptionButton.Background = Brushes.Gray;
             DecryptionButton.Background = Brushes.LightGray;
             KeyButton.Background = Brushes.LightGray;
-
-
         }
 
         private void Decryption_Click(object sender, RoutedEventArgs e)
         {
             Main.Content = new DecryptionPage();
-           DecryptionButton.Background = Brushes.Gray;
-           EncryptionButton.Background = Brushes.LightGray;
+            DecryptionButton.Background = Brushes.Gray;
+            EncryptionButton.Background = Brushes.LightGray;
             KeyButton.Background = Brushes.LightGray;
-
         }
 
         private void Key_Click(object sender, RoutedEventArgs e)
@@ -40,12 +36,18 @@ namespace ProjektInterfejsu
             KeyButton.Background = Brushes.Gray;
             EncryptionButton.Background = Brushes.LightGray;
             DecryptionButton.Background = Brushes.LightGray;
-
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             System.Windows.Application.Current.Shutdown();
+        }
+
+        //wybrano opcję "O programie"
+        //wyświetlenie informacji o programie TO DO
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+           
         }
     }
 }
