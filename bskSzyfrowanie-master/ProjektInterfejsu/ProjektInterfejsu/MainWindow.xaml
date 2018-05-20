@@ -20,8 +20,8 @@
                 </Menu>
             </DockPanel>
             <StackPanel Orientation="Horizontal"  Height="32" Margin="0,10,0,0" >
-                <Button Padding="3,3,3,3"  Content="Szyfrowanie" Background="Gray" Name="EncryptionButton" Height="35"  Click="EncryptionButton_Click" Margin="0,0,0,-3" Width="95" FontWeight="Medium"/>
-                <Button Padding="3,3,3,3" Content="Deszyfrowanie" Background="LightGray" Name="DecryptionButton" Height="35" Click="Decryption_Click" Margin="0,0,0,-3" Width="95" FontWeight="Medium"/>
+                <Button Padding="3,3,3,3"  Content="Szyfrowanie" Background="Gray" Name="EncryptionTab" Height="35"  Click="EncryptionTab_Click" Margin="0,0,0,-3" Width="95" FontWeight="Medium"/>
+                <Button Padding="3,3,3,3" Content="Deszyfrowanie" Background="LightGray" Name="DecryptionTab" Height="35" Click="DecryptionTab_Click" Margin="0,0,0,-3" Width="95" FontWeight="Medium"/>
                 <Button Padding="3,3,3,3" Content="Klucze" Background="LightGray" Name="KeyButton" Height="35" Click="Key_Click" Margin="0,0,0,-3" Width="95" FontWeight="Medium"/>
             </StackPanel>
         </StackPanel>
